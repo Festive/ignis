@@ -48,5 +48,14 @@ return {
 		
 	end,
 	
+	CreateTestGrid = function(self)
+		for _, v3list in next, self.grid do
+			for _, pos in next, v3list do
+				local part = self.base:Clone()
+				part.Position = pos
+				self.Parent = self.baseparent
+			end
+		end
+	end,
 	
 }
